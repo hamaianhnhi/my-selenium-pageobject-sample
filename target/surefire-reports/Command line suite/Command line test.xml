@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="Jack.local" tests="4" failures="0" timestamp="19 Dec 2015 09:31:25 GMT" time="41.626" errors="0">
+  <testcase name="testThatUserShouldBeAbleToClickDownloadButton" time="9.837" classname="HomePage1Test"/>
+  <testcase name="testThatUserShouldBeAbleToClickOnProjectsButton" time="12.257" classname="HomePage1Test"/>
+  <testcase name="testThatUserShouldBeAbleToClickDownloadButton" time="10.824" classname="HomePageTest"/>
+  <testcase name="testThatUserShouldBeAbleToClickOnProjectsButton" time="8.686" classname="HomePageTest"/>
+</testsuite>

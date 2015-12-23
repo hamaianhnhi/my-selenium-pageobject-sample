@@ -10,6 +10,9 @@
     <properties>
         <org.testng.version>6.1.1</org.testng.version>
         <org.seleniumhq.selenium.version>2.48.2</org.seleniumhq.selenium.version>
+        <maven-surefire-plugin.version>2.19</maven-surefire-plugin.version>
+        <run-test-parallel-type>methods</run-test-parallel-type>
+        <run-test-thread-count>3</run-test-thread-count>
     </properties>
 
     <dependencies>
@@ -34,10 +37,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19</version>
+                <version>${maven-surefire-plugin.version}</version>
                 <configuration>
-                    <parallel>methods</parallel>
-                    <threadCount>2</threadCount>
+                    <parallel>${run-test-parallel-type}</parallel>
+                    <threadCount>${run-test-thread-count}</threadCount>
                 </configuration>
             </plugin>
         </plugins>

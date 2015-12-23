@@ -12,7 +12,7 @@
         <org.seleniumhq.selenium.version>2.48.2</org.seleniumhq.selenium.version>
         <maven-surefire-plugin.version>2.19</maven-surefire-plugin.version>
         <run-test-parallel-type>methods</run-test-parallel-type>
-        <run-test-thread-count>3</run-test-thread-count>
+        <run-test-thread-count>1</run-test-thread-count>
     </properties>
 
     <dependencies>

@@ -13,6 +13,9 @@
         <maven-surefire-plugin.version>2.19</maven-surefire-plugin.version>
         <run-test-parallel-type>methods</run-test-parallel-type>
         <run-test-thread-count>1</run-test-thread-count>
+        <browser-name>firefox</browser-name> <!-- default is chrome -->
+        <timeout>15</timeout> <!-- default is 15 seconds -->
+        <chrome-driver-path>${project.basedir}/lib/chromedriver</chrome-driver-path>
     </properties>
 
     <dependencies>
@@ -41,6 +44,10 @@
                 <configuration>
                     <parallel>${run-test-parallel-type}</parallel>
                     <threadCount>${run-test-thread-count}</threadCount>
+                    <systemPropertyVariables>
+                        <browser-name>${browser-name}</browser-name>
+                        <timeout>${timeout}</timeout>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>

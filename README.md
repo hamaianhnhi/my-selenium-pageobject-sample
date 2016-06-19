@@ -32,10 +32,13 @@ mvn antrun:run@download-chrome-driver
 maven clean test [options]
 ```
 available options:
+
+```
 browser-name: firefox, chrome, default is firefox
 timeout: test timeout in seconds, default is 15
 run-test-parallel-type: methods is supported, others kinds is NOT
 run-test-thread-count: number of running thread at same time, use this to parallel tests, default is 1
+```
 
 ## Built With
 

@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageobject.HomePage;
 
-public class HomePageTest {
+public class LoginTest {
 
     private WebDriver webDriver;
 
@@ -21,8 +21,9 @@ public class HomePageTest {
     public void tearDown(){
         webDriver.quit();
     }
+
     @Test
-    public void test1(){
+    public void test3(){
         System.out.println(">>>>test1");
         HomePage homePage = new HomePage(webDriver);
         homePage.navigationDownLoadButton().click();
@@ -56,12 +57,17 @@ public class HomePageTest {
         homePage.navigationDownLoadButton().click();
         homePage.navigationDownLoadButton().click();
         homePage.navigationDownLoadButton().click();
+        homePage.navigationDownLoadButton().click();
+        homePage.navigationDownLoadButton().click();
     }
 
     @Test
-    public void test2(){
+    public void test4(){
         System.out.println(">>>>test2");
         HomePage  homePage = new HomePage(webDriver);
+        homePage.navigationDownLoadButton().click();
+        homePage.navigationDownLoadButton().click();
+        homePage.navigationDownLoadButton().click();
         homePage.navigationDownLoadButton().click();
         homePage.navigationDownLoadButton().click();
         homePage.navigationDownLoadButton().click();

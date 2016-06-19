@@ -11,11 +11,11 @@
         <org.testng.version>6.1.1</org.testng.version>
         <org.seleniumhq.selenium.version>2.53.0</org.seleniumhq.selenium.version>
         <maven-surefire-plugin.version>2.19</maven-surefire-plugin.version>
-        <run-test-parallel-type>methods</run-test-parallel-type>
+        <run-test-parallel-type>methods</run-test-parallel-type> <!-- all test methods will be run in seperated threads-->
         <run-test-thread-count>1</run-test-thread-count>
         <browser-name>firefox</browser-name> <!-- default is chrome -->
         <timeout>15</timeout> <!-- default is 15 seconds -->
-        <chrome-driver-path>${project.basedir}/lib/chromedriver</chrome-driver-path>
+        <chrome-driver-path>${project.basedir}/lib/chromedriver/mac/chromedriver</chrome-driver-path>
     </properties>
 
     <dependencies>
@@ -47,9 +47,39 @@
                     <systemPropertyVariables>
                         <browser-name>${browser-name}</browser-name>
                         <timeout>${timeout}</timeout>
+                        <chrome-driver-path>${chrome-driver-path}</chrome-driver-path>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+                <executions>
+                    <execution>
+                        <id>download-chrome-driver</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <!--TODO: clean directory before downloading -->
+                                <!-- download chrome driver 2.21 -->
+                                <get src="http://chromedriver.storage.googleapis.com/2.22/chromedriver_mac32.zip"
+                                     dest="${project.basedir}/lib/chromedriver/mac/chromedriver.zip"
+                                     verbose="true"
+                                     usetimestamp="true"/>
+                                <!--extract zip-->
+                                <unzip src="${project.basedir}/lib/chromedriver/mac/chromedriver.zip"
+                                       dest="${project.basedir}/lib/chromedriver/mac/"
+                                       overwrite="true"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 

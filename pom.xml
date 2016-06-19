@@ -11,7 +11,7 @@
         <org.testng.version>6.1.1</org.testng.version>
         <org.seleniumhq.selenium.version>2.53.0</org.seleniumhq.selenium.version>
         <maven-surefire-plugin.version>2.19</maven-surefire-plugin.version>
-        <run-test-parallel-type>methods</run-test-parallel-type> <!-- all test methods will be run in seperated threads-->
+        <run-test-parallel-type>classes</run-test-parallel-type> <!-- all test methods will be run in seperated threads-->
         <run-test-thread-count>1</run-test-thread-count>
         <browser-name>firefox</browser-name> <!-- default is firefox -->
         <timeout>15</timeout> <!-- default is 15 seconds -->

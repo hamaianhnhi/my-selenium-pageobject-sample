@@ -1,6 +1,5 @@
-# Selenium page objects example
+# Selenium page objects
 
-One Paragraph of project description goes here
 
 ## Getting Started
 
@@ -8,16 +7,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisities
 
-What things you need to install the software and how to install them
-
 ```
 Maven
 
 ```
 
 ### Installing
-
-A step by step series of examples that tell you have to get a development env running
 
 Clone project to your local machine
 
@@ -31,58 +26,18 @@ then Download chrome driver by following command
 mvn antrun:run@download-chrome-driver
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
 ```
-Give an example
+maven clean test [options]
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+available options:
+browser-name: firefox, chrome, default is firefox
+timeout: test timeout in seconds, default is 15
+run-test-parallel-type: methods is supported, others kinds is NOT
+run-test-thread-count: number of running thread at same time, use this to parallel tests, default is 1
 
 ## Built With
 
-* Dropwizard - Bla bla bla
-* Maven - Maybe
-* Atom - ergaerga
+* Maven
 
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc

@@ -29,7 +29,7 @@ mvn antrun:run@download-chrome-driver
 ## Running the tests
 
 ```
-maven clean
+mvn clean
 mvn compile test-compile
 mvn surefire:test [options]
 ```

@@ -16,6 +16,7 @@
         <browser-name>firefox</browser-name> <!-- default is firefox -->
         <timeout>15</timeout> <!-- default is 15 seconds -->
         <chrome-driver-path>${project.basedir}/lib/chromedriver/mac/chromedriver</chrome-driver-path>
+        <chrome-driver-url>http://chromedriver.storage.googleapis.com/2.20/chromedriver_mac32.zip</chrome-driver-url><!-- TODO: the driver is not executable, please fix this -->
     </properties>
 
     <dependencies>
@@ -65,8 +66,8 @@
                         <configuration>
                             <target>
                                 <!--TODO: clean directory before downloading -->
-                                <!-- download chrome driver 2.21 -->
-                                <get src="http://chromedriver.storage.googleapis.com/2.22/chromedriver_mac32.zip"
+                                <!-- download chrome driver-->
+                                <get src="${chrome-driver-url}"
                                      dest="${project.basedir}/lib/chromedriver/mac/chromedriver.zip"
                                      verbose="true"
                                      usetimestamp="true"/>

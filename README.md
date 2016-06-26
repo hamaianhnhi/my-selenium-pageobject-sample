@@ -30,7 +30,7 @@ mvn antrun:run@download-chrome-driver
 
 ```
 mvn clean
-mvn compile test-compile
+mvn compile test-compile // this compiles the source code and tests
 mvn surefire:test [options]
 ```
 available options:

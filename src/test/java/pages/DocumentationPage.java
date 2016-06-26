@@ -1,4 +1,4 @@
-package pageobject;
+package pages;
 
 
 public class DocumentationPage {

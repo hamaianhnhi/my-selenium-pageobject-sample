@@ -16,7 +16,7 @@ public class HomePage {
         return webDriver.findElement(By.id("menu_projects"));
     }
 
-    public WebElement navigationDownLoadButton(){
+    public WebElement navigationDownloadButton(){
         return webDriver.findElement(By.id("menu_download"));
     }
 

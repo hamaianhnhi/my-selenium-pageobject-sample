@@ -38,7 +38,7 @@ available options:
 ```
 browser-name: firefox, chrome, default is firefox
 timeout: test timeout in seconds, default is 15
-run-test-parallel-type: classes is supported, others kinds is NOT
+run-test-parallel-type: classes is supported, others kinds are NOT
 run-test-thread-count: number of running threads at same time, use this to parallel tests, default is 1
 ```
 

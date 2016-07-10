@@ -21,7 +21,7 @@ public class HomePage {
     }
 
     public WebElement navigationDownloadButton(){
-        return webDriver.findElement(By.id(UIMap.getValueByKey("homepage_navigation_downloadbutton1")));
+        return webDriver.findElement(By.id(UIMap.getValueByKey("homepage_navigation_downloadbutton")));
     }
 
 }

@@ -2,6 +2,7 @@ package tests;
 
 import helpers.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -10,10 +11,12 @@ import pages.HomePage;
 public class HomePageTest {
 
     private WebDriver webDriver;
+    private WebDriverWait webDriverWait;
 
     @BeforeMethod
     public void setUp(){
         webDriver = WebDriverFactory.configWebDriver();
+        webDriverWait = WebDriverFactory.configWebDriverWait(this.webDriver);
     }
 
 
@@ -24,7 +27,7 @@ public class HomePageTest {
     @Test
     public void test1(){
         System.out.println(">>>>test1");
-        HomePage homePage = new HomePage(webDriver);
+        HomePage homePage = new HomePage(webDriver, webDriverWait);
         homePage.navigationDownloadButton().click();
         homePage.navigationDownloadButton().click();
         homePage.navigationDownloadButton().click();
@@ -61,7 +64,7 @@ public class HomePageTest {
     @Test
     public void test2(){
         System.out.println(">>>>test2");
-        HomePage  homePage = new HomePage(webDriver);
+        HomePage  homePage = new HomePage(webDriver, webDriverWait);
         homePage.navigationDownloadButton().click();
         homePage.navigationDownloadButton().click();
         homePage.navigationDownloadButton().click();
